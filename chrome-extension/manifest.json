@@ -1,0 +1,18 @@
+{
+  "manifest_version": 3,
+  "name": "Cookie Transparency with AI",
+  "version": "1.0",
+  "description": "Explains website cookies using AI insights.",
+  "permissions": ["cookies", "storage", "activeTab"],
+  "host_permissions": ["<all_urls>"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icon16.png",
+      "48": "icon48.png"
+    }
+  },
+  "background": {
+    "service_worker": "background.js"
+  }
+}
