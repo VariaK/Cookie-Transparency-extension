@@ -1,27 +1,38 @@
 # 🍪 Cookie Transparency Extension with AI Insight (🛠️ Work-In-Progress...)
 
-A Chrome extension powered by AWS and GenAI that demystifies website cookies—bringing transparency, privacy awareness, and AI-driven explanations to the modern web.
----
+## A Chrome extension powered by **Amazon Bedrock** and **AWS Lambda** that demystifies cookies used by websites—bringing **transparency**, **privacy awareness**, and **AI-generated explanations** to the modern web.
 
 ## 📦 Features
 
-- 🔍 Identifies and lists cookies used by visited websites  
-- 🧠 Uses Amazon Bedrock to generate human-readable explanations of each cookie’s purpose  
-- 📊 Displays categories like Analytics, Advertising, Session, and Essential  
-- 🔐 Emphasizes ethical handling of data, with optional toggles for consent simulation  
+- 🔍 Detects and lists cookies set by visited websites
+- 🧠 Uses Claude (via Amazon Bedrock) to generate human-readable explanations
+- 📊 Categorizes cookies into Analytics, Advertising, Essential, and more
+- ⚠️ Assigns a privacy risk score (Low / Medium / High)
 - 🌍 Lightweight and fast, designed for global use across privacy regulations (GDPR, etc.)
 
 ---
 
 ## 🚀 Technologies Used
 
-| Tech            | Description                                     |
-|----------------|-------------------------------------------------|
-| 🧠 Amazon Bedrock | AI-powered cookie explanation via LLM          |
-| 🔧 AWS Lambda    | Serverless backend for cookie classification    |
-| 🧩 Chrome API    | Core extension logic and browser hooks          |
-| 📝 JavaScript    | Frontend logic for interaction and rendering    |
-| ☁️ AWS S3        | Hosting extension assets                        |
+| Tech              | Purpose                                       |
+| ----------------- | --------------------------------------------- |
+| 🧠 Amazon Bedrock | Claude 3 Sonnet model for cookie explanations |
+| 🔧 AWS Lambda     | Backend logic for classification & caching    |
+| 📊 DynamoDB       | Stores previously analyzed cookies            |
+| 🌐 API Gateway    | Serverless API endpoint                       |
+| 🧩 Chrome APIs    | Captures cookie data from web requests        |
+| 📝 JavaScript     | Handles extension logic and UI interactions   |
 
 ---
-## 🛠️ Work-In-Progress....
+
+## 🧪 How It Works
+
+1. 🕵️‍♀️ Extension listens to cookie events on visited sites
+2. 📡 Sends cookie name & domain to AWS Lambda via API Gateway
+3. 💬 Lambda:
+   - Checks DynamoDB cache
+   - If not found, prompts Claude (via Bedrock) for explanation
+   - Stores and returns the result
+4. 📊 Extension shows explanation, category, and risk score in the popup
+
+---

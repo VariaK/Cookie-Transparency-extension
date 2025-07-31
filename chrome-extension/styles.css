@@ -1,0 +1,72 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 12px;
+  width: 300px;
+  background-color: #f9f9f9;
+}
+
+h1 {
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+#scanBtn {
+  padding: 8px 12px;
+  font-size: 14px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  margin-bottom: 12px;
+}
+
+.cookie-item {
+  background: white;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 10px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+}
+
+.cookie-item strong {
+  font-size: 14px;
+}
+
+.cookie-meta {
+  font-size: 12px;
+  color: #444;
+  margin-top: 4px;
+}
+
+.cookie-summary {
+  margin-top: 8px;
+  font-size: 13px;
+  color: #333;
+  line-height: 1.4;
+}
+
+.badge {
+  display: inline-block;
+  font-size: 11px;
+  padding: 2px 6px;
+  border-radius: 4px;
+  background-color: #eee;
+  margin-left: 4px;
+}
+
+.badge.low {
+  background-color: #c8e6c9;
+  color: #256029;
+}
+
+.badge.medium {
+  background-color: #fff9c4;
+  color: #7f6000;
+}
+
+.badge.high {
+  background-color: #ffcdd2;
+  color: #b71c1c;
+}
