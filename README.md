@@ -1,4 +1,4 @@
-# 🍪 Cookie Transparency Extension with AI Insight (🛠️ Work-In-Progress...)
+# 🍪 Cookie Transparency Extension with AI Insight
 
 ## A Chrome extension powered by **Amazon Bedrock** and **AWS Lambda** that demystifies cookies used by websites—bringing **transparency**, **privacy awareness**, and **AI-generated explanations** to the modern web.
 
